@@ -1,0 +1,41 @@
+<h2> Crypto Market Web App </h2>
+<button  type="button" (click)="exchangeReq()">Make Request</button>
+<!-- <pre *ngFor="let data of mydata">Data Obtained is: {{ data.id }}</pre> -->
+
+
+<!-- <mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+</mat-form-field> -->
+
+<!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8"> -->
+
+  <table>
+    <tr>
+      <th>#</th>
+      <th>Id</th>
+      <th>name</th>
+      <th>year_established</th>
+      <th>country</th>
+      <th>image</th>
+      <th>has_trading_incentive</th>
+      <th>trust_score</th>
+      <th>trust_score_rank</th>
+      <th>trade_volume_24h_btc</th>
+      <th>trade_volume_24h_btc_normalized</th>
+    </tr>
+    <tr *ngFor="let data of exchangeData | sort :'desc':'trade_volume_24h_btc', let i=index" >
+      <td>{{i + 1}}</td>
+      <td>{{ data.id }}</td>
+      <td>{{ data.name }}</td>
+      <td>{{ data.year_established }}</td>
+      <td>{{ data.country }}</td>
+      <td> <img src="{{data.image}}" height="25" width="25"></td>
+      <td>{{ data.has_trading_incentive }}</td>
+      <td>{{ data.trust_score }}</td>
+      <td>{{ data.trust_score_rank }}</td>
+      <td>{{ data.trade_volume_24h_btc }}</td>
+      <td>{{ data.trade_volume_24h_btc_normalized }}</td>
+
+    </tr>
+
+  </table>

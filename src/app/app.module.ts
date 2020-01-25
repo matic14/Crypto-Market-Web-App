@@ -9,11 +9,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatAutocompleteModule, MatButtonModule, MatCheckboxModule, MatDatepickerModule,
   MatFormFieldModule, MatInputModule, MatRadioModule, MatSelectModule, MatSliderModule,
   MatSlideToggleModule } from '@angular/material';
+import { ExchangeComponent } from './exchange/exchange.component';
+import { SortPipe } from './sort.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ExchangeComponent,
+    SortPipe
   ],
   imports: [
     BrowserModule,
