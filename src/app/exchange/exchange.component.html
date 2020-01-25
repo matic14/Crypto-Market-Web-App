@@ -1,13 +1,6 @@
-<h2> Crypto Market Web App </h2>
-<button  type="button" (click)="exchangeReq()">Make Request</button>
-<!-- <pre *ngFor="let data of mydata">Data Obtained is: {{ data.id }}</pre> -->
+<app-menu></app-menu>
 
-
-<!-- <mat-form-field>
-  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-</mat-form-field> -->
-
-<!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8"> -->
+<button  type="button" (click)="exchangeReq()"> Data Request</button>
 
   <table>
     <tr>
@@ -23,7 +16,7 @@
       <th>trade_volume_24h_btc</th>
       <th>trade_volume_24h_btc_normalized</th>
     </tr>
-    <tr *ngFor="let data of exchangeData | sort :'desc':'trade_volume_24h_btc', let i=index" >
+    <tr *ngFor="let data of exchangeData , let i=index" >
       <td>{{i + 1}}</td>
       <td>{{ data.id }}</td>
       <td>{{ data.name }}</td>

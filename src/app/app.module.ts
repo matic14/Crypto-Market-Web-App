@@ -10,14 +10,18 @@ import { MatAutocompleteModule, MatButtonModule, MatCheckboxModule, MatDatepicke
   MatFormFieldModule, MatInputModule, MatRadioModule, MatSelectModule, MatSliderModule,
   MatSlideToggleModule } from '@angular/material';
 import { ExchangeComponent } from './exchange/exchange.component';
-import { SortPipe } from './sort.pipe';
+import { CurrencyDetailsComponent } from './currency-details/currency-details.component';
+import { MenuComponent } from './menu/menu.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ExchangeComponent,
-    SortPipe
+    CurrencyDetailsComponent,
+    MenuComponent,
+
   ],
   imports: [
     BrowserModule,

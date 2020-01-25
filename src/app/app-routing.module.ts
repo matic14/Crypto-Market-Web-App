@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ExchangeComponent } from './exchange/exchange.component';
+import { CurrencyDetailsComponent } from './currency-details/currency-details.component';
+import { MenuComponent } from './menu/menu.component';
 
 
 const routes: Routes = [
@@ -12,6 +14,12 @@ const routes: Routes = [
   },
   {
     path: 'exchange', component: ExchangeComponent
+  },
+  {
+    path: 'menu', component: MenuComponent
+  }, {
+
+    path: 'currency-detail', component: CurrencyDetailsComponent
   }, {
     path: '**', redirectTo: 'home'
   }
