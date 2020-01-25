@@ -1,3 +1,53 @@
-<h2>Basic Request</h2>
-<button type="button" (click)="makeRequests()">Make Request</button>
-<pre *ngFor="let data of mydata">Data Obtained is: {{ data.id }}</pre>
+<h2> Crypto Market Web App </h2>
+<button color = "primary" type="button" (click)="makeRequests()">Make Request</button>
+<!-- <pre *ngFor="let data of mydata">Data Obtained is: {{ data.id }}</pre> -->
+
+
+<!-- <mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+</mat-form-field> -->
+
+<!-- <table mat-table [dataSource]="dataSource" class="mat-elevation-z8"> -->
+
+  <table>
+    <tr>
+      <th>#</th>
+      <th>Id</th>
+      <th>symbol</th>
+      <th>name</th>
+      <th>image</th>
+      <th>current_price</th>
+      <th>market_cap</th>
+      <th>market_cap_rank</th>
+      <th>total_volume</th>
+      <th>high_24h</th>
+      <th>low_24h</th>
+      <th>price_change_24h</th>
+      <th>price_change_percentage_24h</th>
+      <th>market_cap_change_24h</th>
+      <th>circulating_supply</th>
+      <th>total_supply</th>
+      <th>last_updated</th>
+    </tr>
+    <tr *ngFor="let data of mydata , let i=index" >
+      <td>{{i + 1}}</td>
+      <td>{{ data.id }}</td>
+      <td>{{ data.symbol }}</td>
+      <td>{{ data.name }}</td>
+      <td> <img src="{{data.image}}" height="25" width="25"></td>
+      <td>{{ data.current_price }}</td>
+      <td>{{ data.market_cap }}</td>
+      <td>{{ data.market_cap_rank }}</td>
+      <td>{{ data.total_volume }}</td>
+      <td>{{ data.high_24h }}</td>
+      <td>{{ data.low_24h }}</td>
+      <td>{{ data.price_change_24h }}</td>
+      <td>{{ data.market_cap_change_percentage_24h }}</td>
+      <td>{{ data.market_cap_change_24h }}</td>
+      <td>{{ data.circulating_supply }}</td>
+      <td>{{ data.total_supply }}</td>
+      <td>{{ data.last_updated }}</td>
+
+    </tr>
+
+  </table>
